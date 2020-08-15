@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     public int curEnergy;
 
     [Header("Round Resource Increas ")]
-    public int foodPerTurn;
-    public int metalPerTurn;
-    public int oxygenPerTurn;
-    public int energyPerTurn;
+    public int foodPerTurn = 0;
+    public int metalPerTurn = 0;
+    public int oxygenPerTurn = 0;
+    public int energyPerTurn = 0;
 
     public static GameManager instance;
 
@@ -68,18 +68,19 @@ public class GameManager : MonoBehaviour
             {
                 case ResourceType.Food:
                     foodPerTurn += building.productionQuantity;
+                    Debug.Log("Food + 1");
                     break;
-
                 case ResourceType.Metal:
                     metalPerTurn += building.productionQuantity;
+                    Debug.Log("Metal + 1");
                     break;
-
                 case ResourceType.Oxygen:
                     oxygenPerTurn += building.productionQuantity;
+                    Debug.Log("Oxygen + 1");
                     break;
-
                 case ResourceType.Energy:
                     energyPerTurn += building.productionQuantity;
+                    Debug.Log("Energy + 1");
                     break;
             }
         }

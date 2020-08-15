@@ -24,7 +24,7 @@ public class UI : MonoBehaviour
         curTurnText.text = "Turn: " + GameManager.instance.curTurn;
     }
 
-    //called when "End TUrn" button is pressed
+    //called when "End Turn" button is pressed
     public void OnEndTurnButton()
     {
         GameManager.instance.EndTurn();
@@ -61,9 +61,9 @@ public class UI : MonoBehaviour
     public void UpdateResourceText ()
     {
         string food = string.Format("{0} ({1}{2})", GameManager.instance.curFood, GameManager.instance.foodPerTurn < 0 ? "" : "+", GameManager.instance.foodPerTurn);
-        string metal = string.Format("{0} ({1}{2})", GameManager.instance.curFood, GameManager.instance.metalPerTurn < 0 ? "" : "+", GameManager.instance.metalPerTurn);
-        string oxygen = string.Format("{0} ({1}{2})", GameManager.instance.curFood, GameManager.instance.oxygenPerTurn < 0 ? "" : "+", GameManager.instance.oxygenPerTurn);
-        string energy = string.Format("{0} ({1}{2})", GameManager.instance.curFood, GameManager.instance.energyPerTurn < 0 ? "" : "+", GameManager.instance.energyPerTurn);
+        string metal = string.Format("{0} ({1}{2})", GameManager.instance.curMetal, GameManager.instance.metalPerTurn < 0 ? "" : "+", GameManager.instance.metalPerTurn);
+        string oxygen = string.Format("{0} ({1}{2})", GameManager.instance.curOxygen, GameManager.instance.oxygenPerTurn < 0 ? "" : "+", GameManager.instance.oxygenPerTurn);
+        string energy = string.Format("{0} ({1}{2})", GameManager.instance.curEnergy, GameManager.instance.energyPerTurn < 0 ? "" : "+", GameManager.instance.energyPerTurn);
 
         foodAndMetalText.text = food + "\n" + metal;
         oxygenAndEnergyText.text = oxygen + "\n" + energy;
